@@ -1,57 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset ='UTF-8'>
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Bowen Dai</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="documents/favicon.ico">
+        <script src="https://kit.fontawesome.com/af7d495bdf.js" crossorigin="anonymous"></script>
+    </head>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="Bowen Dai">
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="documents/favicon.ico" class="logo">
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#About">About</a></li>
+                        <li><a href="#Projects">Projects</a></li>
+                        <li><a href="#Portfolio">Works</a></li>
+                        <li><a href="#Contact">Contact</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
 
-<head>
-    <title>Bowen Dai</title>
-    <link rel = "stylesheet" href="styleSheet1.css">
-</head>
+                <div class="header-text">
+                    <p>Hi there!</p>
+                    <h1>I am <span>Bowen Dai</span></h1>
+                    <h3>Software engineer student at Waterloo</h3>
+                </div>
+            </div>
+        </div>
 
+<!---------about----------->
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="documents/photo.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello, I am Bowen, a Software Engineering student at the University of Waterloo. I enjoy to solve ambitious and challenging problems. I am currently seeking intership opportunity for summer 2025--let's connect!</p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experiences')">Experiences</p>
+                        <p class="tab-links" onclick="opentab('educations')">Educations</p>
+                    </div>
 
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programing Languages</span><br> C, Python, Java, JavaScript, HTML, CSS, Latex</li>
+                            <li><span>IDE</span><br> VS Code, Vim, PyCharm, Intellij</li>
+                            <li><span>Version Control</span><br> Git, GitHub, GitLab</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents" id="experiences">
+                        <ul>
+                            <li><span>2023 - present</span><br>
+                                Peer/Alumni Tutor for Calculus, Mordern Physic</li>
+                            <li><span>2024 - present</span><br
+                                >Grader for Calculus, Programing in Science</li>
+                        </ul>
+                    </div>
 
+                    <div class="tab-contents" id="educations">
+                        <ul>
+                            <li><span>University of Waterloo</span><br>
+                                Bachelor of Apllied Science, Software Engineering</li>
+                            <li><span>Marianopolis College</span><br>
+                                Diploma of College Study, Health Science</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<body>
-    <header>
-        <a href="#" class="logo">Bowen Dai</a>
+<!------------Projects------------->
+    <div id="Projects">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="projects-list">
+                <div>
+                    <i class="fa-solid fa-chess" id="project-icon"></i>
+                    <h2>Automatic Chess Board</h2>
+
+                    <p>
+                        An autonomous robotic chessboard allows human to play against Stocketfish chess engine on a physical chessboard.
+                        The chessboard employs Hall effect sensor matrix to detect magnetic chess pieces.
+                        The chessboard detects and communicates player's movement to a server running the Stockfish chess engine in real-time via WebSockets.
+                        According to Stockfish's move, the pieces are dragged by the magnet beath the board using CoreXy system.
+                    </p>
+                    <a href="https://git.uwaterloo.ca/b27dai/se101_group_project"><i class="fa-brands fa-gitlab"></i>Source Code</a><br>
+                    <a href="https://docs.google.com/document/d/1hBaP-6vU7rk67OSIL743czcIJ17xdUur2r9CivLmibE/edit?usp=sharing"><i class="fa-solid fa-file"></i>Project report</a>
+                    <img src="documents/chess.png">
+                    
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-code" id="project-icon"></i>
+                    <h2>RSA</h2>
+                    <p>Implement RSA encryption system using Python to allow user to encrypt and decrypt their message as well as generating a pair of public and private keys according to the user's need.</p>
+                    <a href="https://github.com/BowenDai2004/RSA"><i class="fa-brands fa-github"></i></i>Source Code</a>
+                    <img src="documents/RSA.png">
+                </div>
                 
-        <nav>
-            <a href="#About">About</a>
-            <a href="#Projects">Projects</a>
-            <a href="#Experiences">Experiences</a>
-            <a href="#Contact me">Contact me</a>
-        </nav>
-    </header>
-    <h1>Bowen Dai</h1>
-    <p>
-        <h2>Contacts</h2>
-        <a href="https://github.com/BowenDai2004" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/bowen-dai-40a25b28a/" target="_blank">LinkedIn</a>
+                <div>
+                    <i class="fa-solid fa-gamepad" id="project-icon"></i>
+                    <h2>Tetris</h2>
+                    <p>A tetris game for windows</p>
+                    <a href="https://github.com/BowenDai2004/Tetris"><i class="fa-brands fa-github"></i></i>Source Code</a>
+                    <br>
+                    <a href="documents/tetris.exe" download><i class="fa-solid fa-download"></i>Download to play</a>
+                    <img src="documents/tetris.png">
+                </div>
 
-        
-        <div id="About">
-            <h2>About</h2>
-            <img src = "Spirale_Ulam_150.jpg" alt= "Spirale Ulam" style="width:100%;">
+                
+                <div>
+                    <i class="fa-solid fa-globe" id="project-icon"></i>
+                    <h2>Online portfolio</h2>
+                    <p>A responsive website to display my projects. Created with HTML, CSS and JavaScript.</p>
+                    <a href="https://github.com/BowenDai2004/BowenDai2004.github.io"><i class="fa-brands fa-github"></i></i>Source Code</a>
+                    <iframe src="" id="selfIframe" title="Self Viewer"></iframe>
+                    
+                </div>
+            </div>
         </div>
+    </div>
 
-        <div id="Projects" >
-            <h2>Projects</h2>
-            <img src = "Spirale_Ulam_150.jpg" alt= "Spirale Ulam" style="width:100%;">
+<!-----------contact------------->
+<div id="Contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <ul>
+                    <li><a href="mailto:daibowen@gmail.com"><i class="fa-solid fa-envelope"></i>daibowen20040327@gmail.com</a></li>
+                    <li><a href="tel:+14383043909"><i class="fa-solid fa-phone"></i>438-304-3909</a></li>
+                </ul>
+                
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/bowen-dai-40a25b28a/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/BowenDai2004"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://git.uwaterloo.ca/b27dai"><i class="fa-brands fa-gitlab"></i></a>
+                </div>
+                <a href="documents/BowenDaiCV.pdf" class="btn btn2">View CV</a>
+            </div>
+
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" row="10" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Sbmit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+
         </div>
+    </div>
+
+</div>
 
 
-        <div id="Experiences">
-            <h2>Experiences</h2>
-        <img src = "Spirale_Ulam_150.jpg" alt= "Spirale Ulam" style="width:100%;">
-        </div>
-        
-        <div id="Contact me">
-            <h2>Contact me</h2>
-            <img src = "Spirale_Ulam_150.jpg" alt= "Spirale Ulam" style="width:100%;">
-        </div>
-        
-    </p>
-</body>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzDLkseUpsBlkWIbiwjyEp0uGvpyX3SSt_9nhyVMLOD2VFSOJ7oObdd9D_Wazt1VA2xLg/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response =>{ 
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+    <script>
+        // Dynamically set the iframe's source to the current page URL
+        document.getElementById('selfIframe').src = window.location.href;
+    </script>
+
+    <script>
+        var iframe_name = document.getElementById("self-frame");
+        iframe_name.scrolling = "no";
+    </script>
+    </body>
 
 </html>

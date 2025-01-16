@@ -19,7 +19,6 @@
                         <li><a href="#header">Home</a></li>
                         <li><a href="#About">About</a></li>
                         <li><a href="#Projects">Projects</a></li>
-                        <li><a href="#Portfolio">Works</a></li>
                         <li><a href="#Contact">Contact</a></li>
                         <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                     </ul>
@@ -96,10 +95,19 @@
                         The chessboard detects and communicates player's movement to a server running the Stockfish chess engine in real-time via WebSockets.
                         According to Stockfish's move, the pieces are dragged by the magnet beath the board using CoreXy system.
                     </p>
+                    <a href ="https://youtu.be/C6wXCyQJeDc"><i class="fa-brands fa-youtube"></i>Video demo</a><br>
                     <a href="https://git.uwaterloo.ca/b27dai/se101_group_project"><i class="fa-brands fa-gitlab"></i>Source Code</a><br>
                     <a href="https://docs.google.com/document/d/1hBaP-6vU7rk67OSIL743czcIJ17xdUur2r9CivLmibE/edit?usp=sharing"><i class="fa-solid fa-file"></i>Project report</a>
                     <img src="documents/chess.png">
                     
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-globe" id="project-icon"></i>
+                    <h2>Online portfolio</h2>
+                    <p>A responsive website to display my projects. Created with HTML, CSS and JavaScript.</p>
+                    <a href="https://github.com/BowenDai2004/BowenDai2004.github.io"><i class="fa-brands fa-github"></i></i>Source Code</a>
+                    <iframe src="" id="selfIframe" title="Self Viewer"></iframe>
                 </div>
 
                 <div>
@@ -109,7 +117,7 @@
                     <a href="https://github.com/BowenDai2004/RSA"><i class="fa-brands fa-github"></i></i>Source Code</a>
                     <img src="documents/RSA.png">
                 </div>
-                
+
                 <div>
                     <i class="fa-solid fa-gamepad" id="project-icon"></i>
                     <h2>Tetris</h2>
@@ -120,15 +128,45 @@
                     <img src="documents/tetris.png">
                 </div>
 
-                
                 <div>
-                    <i class="fa-solid fa-globe" id="project-icon"></i>
-                    <h2>Online portfolio</h2>
-                    <p>A responsive website to display my projects. Created with HTML, CSS and JavaScript.</p>
-                    <a href="https://github.com/BowenDai2004/BowenDai2004.github.io"><i class="fa-brands fa-github"></i></i>Source Code</a>
-                    <iframe src="" id="selfIframe" title="Self Viewer"></iframe>
-                    
+                    <i class="fa-solid fa-file" id="project-icon"></i>
+                    <h2>Securing Digital Communication in the Post Quantum Era</h2>
+                    <p>The report highlights the vulnerability of current cryptographic systems (e.g., RSA, ECC) to 
+                        quantum computing advancements, which can solve critical mathematical problems like prime 
+                        factorization and discrete logarithms. It evaluates quantum-resistant encryption algorithms, 
+                        including Learning with Errors, Nth-degree Truncated Polynomial Ring Units, McEliece, and 
+                        Advanced Encryption Standard. </p>
+                    <a href="documents/Bowen_Dai_Securing_Digital_Communication_in_the_Post_Quantum_Era.pdf"><i class="fa-solid fa-link"></i>Read the full report</a>
                 </div>
+
+                <div>
+                    <i class="fa-solid fa-file" id="project-icon"></i>
+                    <h2>Limitation of RSA: Wiener's Attack</h2>
+                    <p>A research on the Wiener's Attack which can efficitly recover the private key of 
+                        RSA if the private key ,
+                        <math display="inline">
+                            <mi>d</mi>
+                        </math>
+                         is smaller than 
+                        <math display="inline" id="formula">
+                            <mfrac>
+                                <msup>
+                                    <mi>m</mi>
+                                    <mfrac>
+                                        <mn>1</mn>
+                                        <mn>4</mn>
+                                    </mfrac>
+                                </msup>
+                                <mn>3</mn>
+                            </mfrac>
+                        </math> 
+                        where 
+                        <math display="inline">
+                            <mi>m</mi>
+                        </math> is modulus in RSA.</p>
+                    <a href="documents/RSA_limitation_Wiener's_attack.pdf"><i class="fa-solid fa-link"></i>See the slides</a>
+                </div>
+                
             </div>
         </div>
     </div>
